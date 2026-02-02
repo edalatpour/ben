@@ -10,6 +10,13 @@ public enum Status
     Complete = 3
 }
 
+public enum Priority
+{
+    A = 0,
+    B = 1,
+    C = 2
+}
+
 public class TodoItem
 {
     [PrimaryKey, AutoIncrement]
@@ -19,6 +26,9 @@ public class TodoItem
 
     // Persisted enum status (stored as integer by sqlite-net)
     public Status Status { get; set; }
+
+    // Persisted enum priority (A/B/C)
+    public Priority Priority { get; set; }
 
     // Backwards-compatible boolean for existing bindings/views.
     // Ignored by SQLite mapping since we persist the enum instead.

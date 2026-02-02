@@ -29,6 +29,11 @@ public partial class TodoItemPage : ContentPage
         // Ensure the picker selection reflects the bound item's Status
         if (Item != null)
             StatusPicker.SelectedItem = Item.Status;
+
+        // Populate priority picker and sync selection
+        PriorityPicker.ItemsSource = Enum.GetValues(typeof(Priority)).Cast<Priority>().ToList();
+        if (Item != null)
+            PriorityPicker.SelectedItem = Item.Priority;
     }
 
     async void OnSaveClicked(object sender, EventArgs e)

@@ -17,6 +17,11 @@
             <Picker x:Name="StatusPicker"
                     Title="Select status"
                     SelectedItem="{Binding Status, Mode=TwoWay}" />
+
+            <Label Text="Priority" />
+            <Picker x:Name="PriorityPicker"
+                    Title="Select priority"
+                    SelectedItem="{Binding Priority, Mode=TwoWay}" />
             <Button Text="Save"
                     Clicked="OnSaveClicked" />
             <Button Text="Delete"

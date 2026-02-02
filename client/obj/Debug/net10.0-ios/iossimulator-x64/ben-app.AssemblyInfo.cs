@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ben-app")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+1bd43373b8a4d96b56c4f34261279e211f5aefdd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+2e31b6d991c02ced67618f582a37a265ca4ce136")]
 [assembly: System.Reflection.AssemblyProductAttribute("ben-app")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ben-app")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

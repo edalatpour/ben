@@ -16,7 +16,7 @@
                   SelectionChanged="CollectionView_SelectionChanged">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:TodoItem">
-                        <Grid ColumnDefinitions="Auto, *" Padding="20">
+                        <Grid ColumnDefinitions="Auto, *, Auto" Padding="20">
                             <Label Text="✔️"
                                    Grid.Column="0"
                                    VerticalTextAlignment="Center"
@@ -53,6 +53,11 @@
                             <Label Text="{Binding Name}"
                                    Grid.Column="1"
                                    VerticalTextAlignment="Center"/>
+
+                            <Label Text="{Binding Priority}"
+                                Grid.Column="2"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="End"/>
                         </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
