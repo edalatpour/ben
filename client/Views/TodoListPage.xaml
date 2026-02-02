@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:ben.Models"
+             x:Class="ben.Views.TodoListPage"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             xmlns:views="clr-namespace:ben.Views"
+             ios:Page.UseSafeArea="True"
+             Title="Todo"
+             x:DataType="views:TodoListPage">
+    <Grid RowDefinitions="*,Auto">
+        <CollectionView 
+                  VerticalOptions="Fill"
+                  ItemsSource="{Binding Items}"
+                  SelectionMode="Single"
+                  SelectionChanged="CollectionView_SelectionChanged">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:TodoItem">
+                        <Grid ColumnDefinitions="Auto, *" Padding="20">
+                            <Label Text="✔️"
+                                   Grid.Column="0"
+                                   VerticalTextAlignment="Center"
+                                   IsVisible="False">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding Status}" Value="Complete">
+                                        <Setter Property="IsVisible" Value="True" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+
+                            <Label Text="●"
+                                   Grid.Column="0"
+                                   VerticalTextAlignment="Center"
+                                   IsVisible="False">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding Status}" Value="InProgress">
+                                        <Setter Property="IsVisible" Value="True" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+
+                            <Label Text="➡️"
+                                   Grid.Column="0"
+                                   VerticalTextAlignment="Center"
+                                   IsVisible="False">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding Status}" Value="Forwarded">
+                                        <Setter Property="IsVisible" Value="True" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+
+                            <Label Text="{Binding Name}"
+                                   Grid.Column="1"
+                                   VerticalTextAlignment="Center"/>
+                        </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Grid.Row="1" Text="Add New Item" Clicked="OnItemAdded"
+                Margin="20"/>
+    </Grid>
+</ContentPage>
