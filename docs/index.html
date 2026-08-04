@@ -541,6 +541,26 @@
       padding-bottom: 60px;
     }
 
+    .download-section {
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+
+    .download-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .download-badges img {
+      display: block;
+      height: 44px;
+      width: auto;
+    }
+
     .cta-card {
       background: radial-gradient(circle at top left, #1b2a4a 0, #050814 55%);
       border-radius: 20px;
@@ -641,6 +661,24 @@
 
     <main>
 
+      <!-- Download Section -->
+      <section id="download-top" class="download-section">
+        <div class="section-inner">
+          <div class="section-title" style="text-align:center;">Download Daymark Planner</div>
+          <div class="download-badges">
+            <a href="https://apps.apple.com/us/app/daymark-planner/id6765720167" target="_blank"
+              rel="noopener noreferrer" aria-label="Download on the App Store">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="Download on the App Store" height="40">
+            </a>
+            <a href="https://apps.microsoft.com/detail/9nx84kz608mf" target="_blank" rel="noopener noreferrer"
+              aria-label="Get it from Microsoft Store">
+              <img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft Store"
+                height="52">
+            </a>
+          </div>
+        </div>
+      </section>
 
       <!-- About / Help Section -->
       <section id="about" class="help-section">
@@ -764,6 +802,25 @@
               We use your email address as a key to organize your notes, tasks,
               and other data that you enter into your planner, and for no other purpose.
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download Section (repeated) -->
+      <section id="download-bottom" class="download-section">
+        <div class="section-inner">
+          <div class="section-title" style="text-align:center;">Get Daymark Planner</div>
+          <div class="download-badges">
+            <a href="https://apps.apple.com/us/app/daymark-planner/id6765720167" target="_blank"
+              rel="noopener noreferrer" aria-label="Download on the App Store">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="Download on the App Store" height="40">
+            </a>
+            <a href="https://apps.microsoft.com/detail/9nx84kz608mf" target="_blank" rel="noopener noreferrer"
+              aria-label="Get it from Microsoft Store">
+              <img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft Store"
+                height="52">
+            </a>
           </div>
         </div>
       </section>
